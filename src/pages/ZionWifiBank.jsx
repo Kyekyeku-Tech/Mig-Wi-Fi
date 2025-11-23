@@ -138,7 +138,7 @@ export default function ZionWifiBank() {
         const pkgs = docs.length
           ? docs
           : [
-              { id: "Migration-32d", name: "Migraton — 1 Month", price: 100, description: "32 days 3 device Unlimited" },
+              { id: "Immigration-32d", name: "Immigraton — 1 Month", price: 100, description: "32 days 3 device Unlimited" },
               { id: "Custom-32d", name: "Custom — 1 Month", price: 100, description: "32 days 3 device Unlimited" },
               { id: "Police-32d", name: "Police —  1 Month", price: 100, description: "32 days 3 device Unlimited" },
             ];
