@@ -138,9 +138,9 @@ export default function ZionWifiBank() {
         const pkgs = docs.length
           ? docs
           : [
-              { id: "bronze-32d", name: "Bronze — 1 Month", price: 2, description: "32 days 3 device Unlimited" },
-              { id: "silver-32d", name: "Silver — 1 Month", price: 150, description: "32 days 3 device Unlimited" },
-              { id: "gold-32d", name: "Gold — 1 Month", price: 150, description: "32 days 3 device Unlimited" },
+              { id: "bronze-32d", name: "Bronze — 1 Month", price: 100, description: "32 days 3 device Unlimited" },
+              { id: "silver-32d", name: "Silver — 1 Month", price: 100, description: "32 days 3 device Unlimited" },
+              { id: "gold-32d", name: "Gold — 1 Month", price: 100, description: "32 days 3 device Unlimited" },
             ];
         setPackages(pkgs);
 
