@@ -26,7 +26,7 @@ export default function AdminDashboard() {
   // Single credential inputs
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [packageId, setPackageId] = useState("bronze-32d");
+  const [packageId, setPackageId] = useState("Migration-32d");
   const [description, setDescription] = useState("");
   const [processing, setProcessing] = useState(false);
 
@@ -57,9 +57,9 @@ export default function AdminDashboard() {
   const transItemsPerPage = 10;
 
   const packages = [
-    { id: "bronze-32d", name: "Bronze — 1 Month" },
-    { id: "silver-32d", name: "Silver — 1 Month" },
-    { id: "gold-32d", name: "Gold —  1 Month" },
+    { id: "Migration-32d", name: "Migraton — 1 Month" },
+    { id: "Custom-32d", name: "Custom — 1 Month" },
+    { id: "Police-32d", name: "Police —  1 Month" },
   ];
 
   // Redirect if not authenticated
