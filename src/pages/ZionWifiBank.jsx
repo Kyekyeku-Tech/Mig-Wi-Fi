@@ -235,14 +235,16 @@ export default function ZionWifiBank() {
       return;
     }
 
-    setProcessing(true);
+  setProcessing(true);
+try {
+  // Apply hidden 2% charge
+  const finalAmount = pkg.price * 1.02;
 
-    try {
-      const handler = window.PaystackPop.setup({
-        key: PAYSTACK_KEY,
-        email: email || "no-reply@starlinkwifi.com",
-        amount: Math.round(pkg.price * 100),
-        currency: "GHS",
+  const handler = window.PaystackPop.setup({
+    key: PAYSTACK_KEY,
+    email: email || "no-reply@starlinkwifi.com",
+    amount: Math.round(finalAmount * 100),
+    currency: "GHS",
         metadata: {
           custom_fields: [
             { display_name: "Customer Name", variable_name: "name", value: name },
@@ -250,14 +252,12 @@ export default function ZionWifiBank() {
             { display_name: "Package", variable_name: "packageId", value: pkg.id },
           ],
         },
-        callback: (response) =>
-          handlePaymentSuccess(response.reference, pkg),
+        callback: (response) => handlePaymentSuccess(response.reference, pkg),
       });
-
       handler.openIframe();
     } catch (err) {
       console.error(err);
-      alert("Payment failed to start.");
+      alert("Error initiating payment.");
     } finally {
       setProcessing(false);
     }
